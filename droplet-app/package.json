@@ -5,8 +5,10 @@
   "dependencies": {
     "animated": "^0.2.2",
     "express": "^4.16.4",
+    "mapbox-gl": "^0.52.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-map-gl": "^4.0.10",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.2",
     "react-transition-group": "^2.5.3"
