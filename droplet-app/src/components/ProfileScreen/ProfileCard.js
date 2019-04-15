@@ -18,7 +18,7 @@ const ProfileCard = (props) => (
             <img className='profilecard-pic' src={props.picture} alt='' />
             <p className='username'>@{props.username}</p>
         </div>
-        <p>[This is a filler bio. Your real one will go here once we code it.]</p>
+        <p className='profilecard-text'>{props.bio}</p>
     </div>
 )
 
