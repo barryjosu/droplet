@@ -74,7 +74,7 @@ class NewPostModal extends Component {
             let lng = -123.278711
             let lat = 44.567325
             const postContent = this.getPostContent.value
-            const currentLocation = [long,lat] // later to get from ui..
+            const currentLocation = [lng,lat] // later to get from ui..
             const splashRangeId = 5 // later to get from ui..
             const postTypeId = 3 // later to get from ui..
             //console.log(currentLocation);
