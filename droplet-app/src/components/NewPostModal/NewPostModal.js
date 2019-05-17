@@ -63,6 +63,7 @@ class NewPostModal extends Component {
                 splashRangeId,
                 postTypeId,
                 currentLocation,
+                profilePic: this.props.profilePic,
                 newPostTime: new Date()
             }
             dispatch(newPostAddInitiate())

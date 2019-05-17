@@ -145,6 +145,7 @@ class PostsApi {
             },
             body:JSON.stringify({
                 content: postData.postContent,
+                profilePic: postData.profilePic,
                 location: {
                     type: "Point",
                     coordinates: postData.currentLocation

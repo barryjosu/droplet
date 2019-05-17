@@ -143,6 +143,7 @@ router.post('/:userId', upload.single('postImage'), async (req, res, next) => {
         post.content = req.body.content;
         post.postImage = req.file.path;
         post.location = req.body.location;
+
         //Save it
         await post.save().catch(error=>{
             return res.send(error);
@@ -166,6 +167,7 @@ router.post('/:userId', upload.single('postImage'), async (req, res, next) => {
         post.content = req.body.content;
         post.postImage = undefined;
         post.location = req.body.location;
+        post.profilePic = req.body.profilePic
         //Save it
         await post.save().catch(error=>{
             return res.send(error);
