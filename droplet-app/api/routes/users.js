@@ -107,7 +107,6 @@ router.post('/signin', function(req, res){
                 token : token
             });
         }).catch(function(error){
-            console.log(error);
             if (error === 401){
                 res.status(401).json({
                     error: "Username or Password is invalid"

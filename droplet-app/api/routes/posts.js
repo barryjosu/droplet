@@ -398,6 +398,7 @@ router.post('/:postId/:userId/addComment', async(req, res) =>{
                                                 userid: Uid,
                                                 username: req.body.username,
                                                 content: req.body.content,
+                                                profilePic: req.body.profilePic,
                                                 created: new Date()
                                             }}},(err, post) => {
         if(err) {

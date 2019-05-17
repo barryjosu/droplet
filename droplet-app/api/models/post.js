@@ -61,7 +61,12 @@ const postSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User',
             default: []
-        }]
+        }],
+        profilePic: {
+            data: Buffer,
+            type: String,
+            default: ""
+        }
     }],
     created: {
         type: Date,

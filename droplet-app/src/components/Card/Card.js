@@ -166,7 +166,7 @@ const Card = (props) => {
                     </div>
 
                 </div>
-                <CommentList comments={props.comments} username={props.username} userid={props.userid} postid={props.postID} dispatch={props.dispatch} selectedPageIndex={props.selectedPageIndex} display={show}/>
+                <CommentList comments={props.comments} username={props.username} profilePic={props.profilePic} userid={props.userid} postid={props.postID} dispatch={props.dispatch} selectedPageIndex={props.selectedPageIndex} display={show}/>
             </div>
         </div>
     )
@@ -180,7 +180,8 @@ function mapStateToProps(state){
         likedPosts: state.likedPosts,
         mapPosts: state.mapPosts,
         username: state.profile.username,
-        userid: state.profile.userid
+        userid: state.profile.userid,
+        profilePic: state.profile.profilePic
     }
 }
 

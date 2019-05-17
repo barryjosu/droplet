@@ -42,7 +42,8 @@ function submitComment(content, commentid, props){
             body:JSON.stringify({
                 content: content,
                 username: props.username,
-                commentid: commentid
+                commentid: commentid,
+                profilePic: props.profilePic
             })
         }).then(response => {
             return response.json()
@@ -70,7 +71,8 @@ function modifyComment(e,content, props){
                                     _id:commentID,
                                     userid: props.userid,
                                     username: props.username,
-                                    content: content};
+                                    content: content,
+                                    profilePic: props.profilePic};
                     newPostComments0.push(newComment0);
                     newPost0.comments = newPostComments0;
                     props.dispatch(addComment(newPost0, props.postID, 0));
@@ -89,7 +91,8 @@ function modifyComment(e,content, props){
                                         username: props.username,
                                         content: content,
                                         created: new Date(),
-                                        likes: []};
+                                        likes: [],
+                                        profilePic: props.profilePic};
                     newPostComments2.push(newComment2);
                     newPost2.comments = newPostComments2;
                     props.dispatch(addComment(newPost2, props.postID, 2));
@@ -106,7 +109,8 @@ function modifyComment(e,content, props){
                                         username: props.username,
                                         content: content,
                                         created: new Date(),
-                                        likes: []};
+                                        likes: [],
+                                        profilePic: props.profilePic};
                     newPostComments3.push(newComment3);
                     newPost3.comments = newPostComments3;
                     props.dispatch(addComment(newPost3, props.postID, 3));
@@ -144,6 +148,7 @@ const CommentList = (props) => {
                         commentID={comment._id}
                         postID={props.postid}
                         name={comment.username}
+                        picture={comment.profilePic}
                         text={comment.content}
                         date={comment.created}
                         likes={comment.likes.length}
