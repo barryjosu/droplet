@@ -90,8 +90,8 @@ export function sendNewPost(postData,pageIndex,userID,location) {
                 case 1:
                     dispatch(loadMapPosts(location[0], location[1], 1000));
                     break;
-                //Don't have to handle 2 since you'll never have a like on
-                //a post you just made
+                case 2:
+                    break;
                 case 3:
                     dispatch(loadProfilePosts(userID));
                     break;
