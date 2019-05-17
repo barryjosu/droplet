@@ -105,6 +105,7 @@ router.post('/:userId', upload.single('postImage'), async (req, res, next) => {
         const post = new Post();
         post._id = new mongoose.Types.ObjectId();
         post.userid = user._id;
+        post.splash = 100;
         post.username = user.username;
         post.content = req.body.content;
         post.postImage = req.file.path;
@@ -144,7 +145,7 @@ router.post('/:userId', upload.single('postImage'), async (req, res, next) => {
         await user.save().catch(error=>{
             return res.send(error);
         });
-        //res.send(post);
+        res.send(post);
     }
 });
 

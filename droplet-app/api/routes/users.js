@@ -288,7 +288,32 @@ router.delete('/:userId',
 });
 
 //BUILD DEMO USERS
-router.post('/demo', upload.single('postImage'), async (req, res, next) => {
+
+router.post('/demo', async (req, res, next) => {
+
+    var postImage = [
+            "../../images/amelia_farmers.jpg",
+            "../../images/ava_steak.jpg",
+            "../../images/ben_burger.jpg",
+            "../../images/elijah_vw.jpg",
+            "../../images/emelia_cat.jpg",
+            "../../images/emma_pdx.jpg",
+            "../../images/harper_mtnbike.jpg",
+            "../../images/issabella_bike.jpg",
+            "../../images/james_waterfall.jpg",
+            "../../images/leo_bridge.jpg",
+            "../../images/liam_downhill.jpg",
+            "../../images/logan_portlandia.jpg",
+            "../../images/luke_flower.jpg",
+            "../../images/mason_cape_creek.jpg",
+            "../../images/mia_ocean.jpg",
+            "../../images/noah_coast.jpg",
+            "../../images/oliver_sing.jpg",
+            "../../images/olivia_ptown.jpg",
+            "../../images/sawyer_dunes.jpg",
+            "../../images/will_snow.jpg",
+            "../../images/willow_sunset.jpg"
+        ]
 
     //First, deletes all Users
     User.deleteMany({})
@@ -803,7 +828,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Amelia",
         content: "I LOVE the farmers markets on Wednesdays and Saturdays down by the water front!",
-        postImage: "../../images/amelia_farmers.jpg",
+        //postImage: req.files[0],
+        postImage: postImage[0],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.259,44.563]}
     });
     if(p1){
@@ -818,7 +845,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Ava",
         content: "yummmmmmm",
-        postImage: "../../images/ava_steak.jpg",
+        //postImage: req.files[1],
+        postImage: postImage[1],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.262,44.562]}
     });
     if(p2){
@@ -833,7 +862,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Ben",
         content: "Look at this beaut!",
-        postImage: "../../images/ben_burger.jpg",
+        //postImage: req.files[2],
+        postImage: postImage[2],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.259,44.565]}
     });
     if(p3){
@@ -848,6 +879,8 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Charlotte",
         content: "Basically living on the 5th floor of the library. I can't wait to be done with finals.",
+        postImage: undefined,
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.276,44.565]}
     });
     if(p4){
@@ -862,6 +895,8 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Elias",
         content: "So many great projects at the Expo this year. Especially the Droplet team!",
+        postImage: undefined,
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.279,44.567]}
     });
     if(p5){
@@ -876,7 +911,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Elijah",
         content: "Check out my new ride!",
-        postImage: "../../images/elijah_vw.jpg",
+        //postImage: req.files[3],
+        postImage: postImage[3],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.291,44.557]}
     });
     if(p6){
@@ -891,7 +928,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Emilia",
         content: "Starbuck believes he is the king of the house. He is.",
-        postImage: "../../images/emilia_cat.jpg",
+        //postImage: req.files[4],
+        postImage: postImage[4],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.292,44.559]}
     });
     if(p7){
@@ -906,7 +945,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Emma",
         content: "Happy to go home for the summer, but sad to leave.. Bye Oregon :(",
-        postImage: "../../images/emma_pdx.jpg",
+        //postImage: req.files[5],
+        postImage: postImage[5],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-122.559,45.590]}
     });
     if(p8){
@@ -921,6 +962,8 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Evelyn",
         content: "CaNOTTT wait for summer. I don't like having to do homework with this amazing sunny whether. Not fair.",
+        postImage: undefined,
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.280,44.564]}
     });
     if(p9){
@@ -935,6 +978,8 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Ezra",
         content: "Two hour classes should be outlawed",
+        postImage: undefined,
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.279,44.566]}
     });
     if(p10){
@@ -949,7 +994,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Harper",
         content: "Hitting the saddle this morning!",
-        postImage: "../../images/harper_mtnbike.jpg",
+        //postImage: req.files[6],
+        postImage: postImage[6],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.336,44.637]}
     });
     if(p11){
@@ -964,7 +1011,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Issabella",
         content: "Those whitewall bicycle tires though",
-        postImage: "../../images/issabella_bike.jpg",
+        //postImage: req.files[7],
+        postImage: postImage[7],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.272,44.556]}
     });
     if(p12){
@@ -979,7 +1028,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "James",
         content: "Study break, gotta get out of town for an impromptu adventure!",
-        postImage: "../../images/james_waterfall.jpg",
+        //postImage: req.files[8],
+        postImage: postImage[8],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-122.694,44.394]}
     });
     if(p13){
@@ -994,7 +1045,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Leo",
         content: "Saint John's bridge",
-        postImage: "../../images/leo_bridge.jpg",
+        //postImage: req.files[9],
+        postImage: postImage[9],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-122.762,45.587]}
     });
     if(p14){
@@ -1009,7 +1062,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Liam",
         content: "Spring is the best time for down hilling!",
-        postImage: "../../images/liam_downhill.jpg",
+        //postImage: req.files[10],
+        postImage: postImage[10],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.372,44.581]}
     });
     if(p15){
@@ -1024,7 +1079,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Logan",
         content: "Guess where I am",
-        postImage: "../../images/logan_portlandia.jpg",
+        //postImage: req.files[11],
+        postImage: postImage[11],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-122.680,45.522]}
     });
     if(p16){
@@ -1039,7 +1096,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Luke",
         content: "Pink",
-        postImage: "../../images/luke_flower.jpg",
+        //postImage: req.files[12],
+        postImage: postImage[12],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-123.284,44.562]}
     });
     if(p17){
@@ -1054,7 +1113,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Mason",
         content: "Back at home in Florence for the weekend",
-        postImage: "../../images/mason_cape_creek.jpg",
+        //postImage: req.files[13],
+        postImage: postImage[13],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-124.107,43.996]}
     });
     if(p18){
@@ -1069,7 +1130,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Mia",
         content: "NO whales :(",
-        postImage: "../../images/mia_ocean.jpg",
+        //postImage: req.files[14],
+        postImage: postImage[14],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-124.074,44.622]}
     });
     if(p19){
@@ -1084,7 +1147,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         username: "Noah",
         content: "Just hangin' at the edge of the earth",
-        postImage: "../../images/noah_coast.jpg",
+        //postImage: req.files[15],
+        postImage: postImage[15],
+        slash_rad: 100,
         location: {type: "Point", coordinates: [-124.018,44.968]}
     });
     if(p20){
@@ -1099,7 +1164,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             _id: new mongoose.Types.ObjectId(),
             username: "Oliver",
             content: "Sing it out",
-            postImage: "../../images/oliver_sing.jpg",
+            //postImage: req.files[16],
+            postImage: postImage[16],
+            slash_rad: 100,
             location: {type: "Point", coordinates: [-123.273,44.540]}
         });
         if(p21){
@@ -1114,7 +1181,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             _id: new mongoose.Types.ObjectId(),
             username: "Olivia",
             content: "Such a great night last night!",
-            postImage: "../../images/olivia_ptown.jpg",
+            //postImage: req.files[17],
+            postImage: postImage[17],
+            slash_rad: 100,
             location: {type: "Point", coordinates: [-122.671,45.527]}
         });
         if(p22){
@@ -1129,7 +1198,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             _id: new mongoose.Types.ObjectId(),
             username: "Sawyer",
             content: "Side by side on the dunes: the most fun.",
-            postImage: "../../images/sawyer_dunes.jpg",
+            //postImage: req.files[18],
+            postImage: postImage[18],
+            slash_rad: 100,
             location: {type: "Point", coordinates: [-124.111,43.914]}
         });
         if(p23){
@@ -1144,6 +1215,8 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             _id: new mongoose.Types.ObjectId(),
             username: "Sophia",
             content: "WOO!! I just got through my thesis defense! I'm SO glad its done!",
+            postImage: undefined,
+            slash_rad: 100,
             location: {type: "Point", coordinates: [-123.281,44.565]}
         });
         if(p24){
@@ -1158,7 +1231,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             _id: new mongoose.Types.ObjectId(),
             username: "Will",
             content: "Snow in the Spring? Yep",
-            postImage: "../../images/will_snow.jpg",
+            //postImage: req.files[19],
+            postImage: postImage[19],
+            slash_rad: 100,
             location: {type: "Point", coordinates: [-121.711,45.331]}
         });
         if(p25){
@@ -1173,7 +1248,9 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             _id: new mongoose.Types.ObjectId(),
             username: "Willow",
             content: "On my way back into Corvallis",
-            postImage: "../../images/willow_sunset.jpg",
+            //postImage: req.files[20],
+            postImage: postImage[20],
+            slash_rad: 100,
             location: {type: "Point", coordinates: [-123.265,44.555]}
         });
         if(p26){
