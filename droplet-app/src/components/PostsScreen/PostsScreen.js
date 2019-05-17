@@ -13,8 +13,14 @@ class PostsScreen extends Component{
     }
 
     componentDidMount(){
+        //TEMP FIX
+        //Starting coords, centered on Corvallis
+        let lng = -123.278711
+        let lat = 44.567325
         if(Array.isArray(this.props.location) && this.props.location.length === 2){
             this.props.dispatch(loadHomePosts(this.props.location));
+        }else{
+            this.props.dispatch(loadHomePosts([lng,lat]))
         }
         this.props.dispatch(homePage());
         this.props.dispatch(updateTime());
