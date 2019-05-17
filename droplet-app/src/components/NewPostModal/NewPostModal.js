@@ -72,8 +72,8 @@ class NewPostModal extends Component {
         }
         else{   //No location access.
             //TEMP FIX, STATIC LOCATION
-            let lng = -123.278711
-            let lat = 44.567325
+            const lng = -123.278711
+            const lat = 44.567325
             const postContent = this.getPostContent.value
             const currentLocation = [lng,lat] // later to get from ui..
             const splashRangeId = 5 // later to get from ui..
@@ -84,6 +84,7 @@ class NewPostModal extends Component {
                 splashRangeId,
                 postTypeId,
                 currentLocation,
+                profilePic: this.props.profilePic,
                 newPostTime: new Date()
             }
             dispatch(newPostAddInitiate())
