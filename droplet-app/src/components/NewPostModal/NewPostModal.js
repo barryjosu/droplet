@@ -70,7 +70,25 @@ class NewPostModal extends Component {
             dispatch(updateTime());
         }
         else{   //No location access.
-            dispatch(newPostAddFailure());
+            //TEMP FIX, STATIC LOCATION
+            let lng = -123.278711
+            let lat = 44.567325
+            const postContent = this.getPostContent.value
+            const currentLocation = [long,lat] // later to get from ui..
+            const splashRangeId = 5 // later to get from ui..
+            const postTypeId = 3 // later to get from ui..
+            //console.log(currentLocation);
+            const newPost = {
+                postContent,
+                splashRangeId,
+                postTypeId,
+                currentLocation,
+                newPostTime: new Date()
+            }
+            dispatch(newPostAddInitiate())
+            dispatch(sendNewPost(newPost,pageIndex,this.props.userid, this.props.location))
+            dispatch(updateTime());
+            //dispatch(newPostAddFailure());
         }
     }
 
