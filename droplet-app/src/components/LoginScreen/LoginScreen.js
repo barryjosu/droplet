@@ -5,7 +5,7 @@ import { withRouter, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import {loadLoginData} from '../../actions/loginActions'
 import {updateLocation} from '../../actions/miscActions'
-
+import server from '../../config.js'
 class LoginScreen extends Component{
     constructor(props){
         super(props)
