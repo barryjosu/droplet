@@ -12,12 +12,19 @@ import server from '../../config.js'
 const PostMedia = (props) => {
 
     switch(props.mediaType) {
+
         case 'photo':
-            return (<div className='post-media'><img src={props.mediaSource} alt=''/></div>)
+
+            return (<div className='post-media'><img className='post-photo' src={props.mediaSource} alt=''/></div>)
+
         case 'video':
+
             return (<div className='post-media'><video src={props.mediaSource} /></div>)
+
         default:
+
             return (<div></div>)
+
     }
 }
 

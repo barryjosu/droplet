@@ -27,6 +27,22 @@ div.card {
             border-radius: 50%;
         }
     }
+    
+    div.post-media {
+
+        padding: 7px 0;
+
+        img.post-photo {
+
+            margin-left: -20px;
+
+            width: calc(100% + 40px);
+
+            filter: contrast(50%);
+
+        }
+
+    }
 
     p.card-text {
         font-size: 14px;
@@ -61,7 +77,7 @@ div.card {
             }
 
             div.messages-outer {
-                
+
             }
 
             div.comments-outer {
