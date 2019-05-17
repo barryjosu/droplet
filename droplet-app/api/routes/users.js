@@ -307,9 +307,37 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
     //Create all Demo Users
     //All use the password "querty123"
     const pword = "qwerty123";
+    //Properly assign id's to posts.
+    const amelia = new mongoose.Types.ObjectId();
+    const ben = new mongoose.Types.ObjectId();
+    const ava = new mongoose.Types.ObjectId();
+    const elijah = new mongoose.Types.ObjectId();
+    const charlotte = new mongoose.Types.ObjectId();
+    const emilia = new mongoose.Types.ObjectId();
+    const elias = new mongoose.Types.ObjectId();
+    const emma = new mongoose.Types.ObjectId();
+    const harper = new mongoose.Types.ObjectId();
+    const ezra = new mongoose.Types.ObjectId();
+    const issabella = new mongoose.Types.ObjectId();
+    const leo = new mongoose.Types.ObjectId();
+    const logan = new mongoose.Types.ObjectId();
+    const luke = new mongoose.Types.ObjectId();
+    const mia = new mongoose.Types.ObjectId();
+    const oliver = new mongoose.Types.ObjectId();
+    const liam = new mongoose.Types.ObjectId();
+    const sophia = new mongoose.Types.ObjectId();
+    const olivia = new mongoose.Types.ObjectId();
+    const evelyn = new mongoose.Types.ObjectId();
+    const willow = new mongoose.Types.ObjectId();
+    const noah = new mongoose.Types.ObjectId();
+    const james = new mongoose.Types.ObjectId();
+    const will = new mongoose.Types.ObjectId();
+    const mason = new mongoose.Types.ObjectId();
+    const sawyer = new mongoose.Types.ObjectId();
+
     bcrypt.hash(pword, 10, function(err, hash){
         var user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: amelia,
             username: "Amelia",
             password: hash,
             profilePic: "../../images/amelia.jpg",
@@ -328,7 +356,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: ava,
             username: "Ava",
             password: hash,
             profilePic: "../../images/ava.jpg",
@@ -348,7 +376,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: ben,
             username: "Ben",
             password: hash,
             profilePic: "../../images/ben.jpg",
@@ -368,7 +396,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: charlotte,
             username: "Charlotte",
             password: hash,
             profilePic: "../../images/charlotte.jpg",
@@ -388,7 +416,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: elias,
             username: "Elias",
             password: hash,
             profilePic: "../../images/Elias.jpg",
@@ -408,7 +436,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: elijah,
             username: "Elijah",
             password: hash,
             profilePic: "../../images/elijah.jpg",
@@ -428,7 +456,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: emilia,
             username: "Emilia",
             password: hash,
             profilePic: "../../images/emilia.jpg",
@@ -448,7 +476,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: emma,
             username: "Emma",
             password: hash,
             profilePic: "../../images/emma.jpg",
@@ -468,7 +496,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: evelyn,
             username: "Evelyn",
             password: hash,
             profilePic: "../../images/evelyn.jpg",
@@ -488,7 +516,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: ezra,
             username: "Ezra",
             password: hash,
             profilePic: "../../images/ezra.jpg",
@@ -508,7 +536,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: harper,
             username: "Harper",
             password: hash,
             profilePic: "../../images/harper.jpg",
@@ -528,7 +556,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: issabella,
             username: "Issabella",
             password: hash,
             profilePic: "../../images/issabella.jpg",
@@ -548,7 +576,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: james,
             username: "James",
             password: hash,
             profilePic: "../../images/james.jpg",
@@ -568,7 +596,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: leo,
             username: "Leo",
             password: hash,
             profilePic: "../../images/leo.jpg",
@@ -588,7 +616,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: liam,
             username: "Liam",
             password: hash,
             profilePic: "../../images/liam.jpg",
@@ -608,7 +636,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: logan,
             username: "Logan",
             password: hash,
             profilePic: "../../images/logan.jpg",
@@ -628,7 +656,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: luke,
             username: "Luke",
             password: hash,
             profilePic: "../../images/luke.jpg",
@@ -648,7 +676,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: mason,
             username: "Mason",
             password: hash,
             profilePic: "../../images/mason.jpg",
@@ -668,7 +696,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: mia,
             username: "Mia",
             password: hash,
             profilePic: "../../images/mia.jpg",
@@ -688,7 +716,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: noah,
             username: "Noah",
             password: hash,
             profilePic: "../../images/noah.jpg",
@@ -708,7 +736,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: oliver,
             username: "Oliver",
             password: hash,
             profilePic: "../../images/oliver.jpg",
@@ -728,7 +756,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: olivia,
             username: "Olivia",
             password: hash,
             profilePic: "../../images/olivia.jpg",
@@ -748,7 +776,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: sawyer,
             username: "Sawyer",
             password: hash,
             profilePic: "../../images/sawyer.jpg",
@@ -768,7 +796,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: sophia,
             username: "Sophia",
             password: hash,
             profilePic: "../../images/sophia.jpg",
@@ -788,7 +816,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: will,
             username: "Will",
             password: hash,
             profilePic: "../../images/will.jpg",
@@ -808,7 +836,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
 
     bcrypt.hash(pword, 10, function(err, hash){
         user = new User({
-            _id: new mongoose.Types.ObjectId(),
+            _id: willow,
             username: "Willow",
             password: hash,
             profilePic: "../../images/willow.jpg",
@@ -832,7 +860,8 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "I LOVE the farmers markets on Wednesdays and Saturdays down by the water front!",
         postImage: "../../images/amelia_farmers.jpg",
         location: {type: "Point", coordinates: [-123.259,44.563]},
-        profilePic: "../../images/Amelia.jpg"
+        profilePic: "../../images/Amelia.jpg",
+        userid: amelia
     });
     if(p1){
         var user = await User.findOne({username: "Amelia"});
@@ -848,6 +877,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "yummmmmmm",
         postImage: "../../images/ava_steak.jpg",
         profilePic: "../../images/Ava.jpg",
+        userid: ava,
         location: {type: "Point", coordinates: [-123.262,44.562]}
     });
     if(p2){
@@ -864,6 +894,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Look at this beaut!",
         postImage: "../../images/ben_burger.jpg",
         profilePic: "../../images/ben.jpg",
+        userid: ben,
         location: {type: "Point", coordinates: [-123.259,44.565]}
     });
     if(p3){
@@ -879,6 +910,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         username: "Charlotte",
         content: "Basically living on the 5th floor of the library. I can't wait to be done with finals.",
         profilePic: "../../images/charlotte.jpg",
+        userid: charlotte,
         location: {type: "Point", coordinates: [-123.276,44.565]}
     });
     if(p4){
@@ -894,6 +926,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         username: "Elias",
         content: "So many great projects at the Expo this year. Especially the Droplet team!",
         profilePic: "../../images/elias.jpg",
+        userid: elias,
         location: {type: "Point", coordinates: [-123.279,44.567]}
     });
     if(p5){
@@ -910,6 +943,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Check out my new ride!",
         postImage: "../../images/elijah_vw.jpg",
         profilePic: "../../images/elijah.jpg",
+        userid: elijah,
         location: {type: "Point", coordinates: [-123.291,44.557]}
     });
     if(p6){
@@ -926,6 +960,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Starbuck believes he is the king of the house. He is.",
         postImage: "../../images/emilia_cat.jpg",
         profilePic: "../../images/emilia.jpg",
+        userid: emilia,
         location: {type: "Point", coordinates: [-123.292,44.559]}
     });
     if(p7){
@@ -942,6 +977,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Happy to go home for the summer, but sad to leave.. Bye Oregon :(",
         postImage: "../../images/emma_pdx.jpg",
         profilePic: "../../images/emma.jpg",
+        userid: emma,
         location: {type: "Point", coordinates: [-122.559,45.590]}
     });
     if(p8){
@@ -957,6 +993,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         username: "Evelyn",
         content: "CaNOTTT wait for summer. I don't like having to do homework with this amazing sunny whether. Not fair.",
         profilePic: "../../images/evelyn.jpg",
+        userid: evelyn,
         location: {type: "Point", coordinates: [-123.280,44.564]}
     });
     if(p9){
@@ -972,6 +1009,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         username: "Ezra",
         content: "Two hour classes should be outlawed",
         profilePic: "../../images/ezra.jpg",
+        userid: ezra,
         location: {type: "Point", coordinates: [-123.279,44.566]}
     });
     if(p10){
@@ -988,6 +1026,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Hitting the saddle this morning!",
         postImage: "../../images/harper_mtnbike.jpg",
         profilePic: "../../images/harper.jpg",
+        userid: harper,
         location: {type: "Point", coordinates: [-123.336,44.637]}
     });
     if(p11){
@@ -1004,6 +1043,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Those whitewall bicycle tires though",
         postImage: "../../images/issabella_bike.jpg",
         profilePic: "../../images/issabella.jpg",
+        userid: issabella,
         location: {type: "Point", coordinates: [-123.272,44.556]}
     });
     if(p12){
@@ -1020,6 +1060,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Study break, gotta get out of town for an impromptu adventure!",
         postImage: "../../images/james_waterfall.jpg",
         profilePic: "../../images/james.jpg",
+        userid: james,
         location: {type: "Point", coordinates: [-122.694,44.394]}
     });
     if(p13){
@@ -1036,6 +1077,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Saint John's bridge",
         postImage: "../../images/leo_bridge.jpg",
         profilePic: "../../images/leo.jpg",
+        userid: leo,
         location: {type: "Point", coordinates: [-122.762,45.587]}
     });
     if(p14){
@@ -1052,6 +1094,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Spring is the best time for down hilling!",
         postImage: "../../images/liam_downhill.jpg",
         profilePic: "../../images/liam.jpg",
+        userid: liam,
         location: {type: "Point", coordinates: [-123.372,44.581]}
     });
     if(p15){
@@ -1068,6 +1111,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Guess where I am",
         postImage: "../../images/logan_portlandia.jpg",
         profilePic: "../../images/logan.jpg",
+        userid: logan,
         location: {type: "Point", coordinates: [-122.680,45.522]}
     });
     if(p16){
@@ -1084,6 +1128,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Pink",
         postImage: "../../images/luke_flower.jpg",
         profilePic: "../../images/luke.jpg",
+        userid: luke,
         location: {type: "Point", coordinates: [-123.284,44.562]}
     });
     if(p17){
@@ -1100,6 +1145,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Back at home in Florence for the weekend",
         postImage: "../../images/mason_cape_creek.jpg",
         profilePic: "../../images/mason.jpg",
+        userid: mason,
         location: {type: "Point", coordinates: [-124.107,43.996]}
     });
     if(p18){
@@ -1116,6 +1162,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "NO whales :(",
         postImage: "../../images/mia_ocean.jpg",
         profilePic: "../../images/mia.jpg",
+        userid: mia,
         location: {type: "Point", coordinates: [-124.074,44.622]}
     });
     if(p19){
@@ -1132,6 +1179,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
         content: "Just hangin' at the edge of the earth",
         postImage: "../../images/noah_coast.jpg",
         profilePic: "../../images/noah.jpg",
+        userid: noah,
         location: {type: "Point", coordinates: [-124.018,44.968]}
     });
     if(p20){
@@ -1148,6 +1196,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             content: "Sing it out",
             postImage: "../../images/oliver_sing.jpg",
             profilePic: "../../images/oliver.jpg",
+            userid: oliver,
             location: {type: "Point", coordinates: [-123.273,44.540]}
         });
         if(p21){
@@ -1164,6 +1213,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             content: "Such a great night last night!",
             postImage: "../../images/olivia_ptown.jpg",
             profilePic: "../../images/olivia.jpg",
+            userid: olivia,
             location: {type: "Point", coordinates: [-122.671,45.527]}
         });
         if(p22){
@@ -1180,6 +1230,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             content: "Side by side on the dunes: the most fun.",
             postImage: "../../images/sawyer_dunes.jpg",
             profilePic: "../../images/sawyer.jpg",
+            userid: sawyer,
             location: {type: "Point", coordinates: [-124.111,43.914]}
         });
         if(p23){
@@ -1195,6 +1246,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             username: "Sophia",
             content: "WOO!! I just got through my thesis defense! I'm SO glad its done!",
             profilePic: "../../images/sophia.jpg",
+            userid: sophia,
             location: {type: "Point", coordinates: [-123.281,44.565]}
         });
         if(p24){
@@ -1211,6 +1263,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             content: "Snow in the Spring? Yep",
             postImage: "../../images/will_snow.jpg",
             profilePic: "../../images/will.jpg",
+            userid: will,
             location: {type: "Point", coordinates: [-121.711,45.331]}
         });
         if(p25){
@@ -1227,6 +1280,7 @@ router.post('/demo', upload.single('postImage'), async (req, res, next) => {
             content: "On my way back into Corvallis",
             postImage: "../../images/willow_sunset.jpg",
             profilePic: "../../images/willow.jpg",
+            userid: willow,
             location: {type: "Point", coordinates: [-123.265,44.555]}
         });
         if(p26){
