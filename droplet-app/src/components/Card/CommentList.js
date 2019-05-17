@@ -5,10 +5,10 @@ import Auth from '../Auth/Auth.js'
 import {connect} from 'react-redux'
 import CommentCard from './CommentCard'
 import {addComment} from '../../actions/postActions'
-
+import server from '../../config.js'
 
 function makeCommentId(){
-    const fetchIDURL = 'http://localhost:5000/posts/AComment'
+    const fetchIDURL = server + '/posts/AComment'
     const token = Auth.getCookie('token');
     const header = 'Bearer ' + token;
     return fetch(fetchIDURL,{
@@ -28,7 +28,7 @@ function makeCommentId(){
 }
 
 function submitComment(content, commentid, props){
-    const fetchURL = 'http://localhost:5000/posts/' + props.postid + "/" + props.userid + "/addComment";
+    const fetchURL = server + '/posts/' + props.postid + "/" + props.userid + "/addComment";
     const token = Auth.getCookie('token');
     const header = 'Bearer ' + token;
 

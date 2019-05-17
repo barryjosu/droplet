@@ -28,7 +28,7 @@ class SignUpScreen extends Component{
 
     signup(username,password,cpass, bio,dispatch){
         if(password===cpass){
-            fetch('http://localhost:5000/users/',{
+            fetch(server + '/users/',{
                 method:'POST',
                 headers: {
                     'Accept': 'application/json',

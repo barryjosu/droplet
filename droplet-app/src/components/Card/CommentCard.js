@@ -4,9 +4,10 @@ import Auth from '../Auth/Auth.js'
 import likesIcon from './likes.svg'
 import {connect} from 'react-redux'
 import {likeComment} from '../../actions/postActions'
+import server from '../../config.js'
 
 function updateCommentLike(userID, postID, commentID){
-    const fetchURL = 'http://localhost:5000/posts/likeComment/' + userID + '/' + postID + '/' + commentID;
+    const fetchURL = server + '/posts/likeComment/' + userID + '/' + postID + '/' + commentID;
     const token = Auth.getCookie('token');
     const header = 'Bearer ' + token;
     return fetch(fetchURL,{

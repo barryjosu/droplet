@@ -7,6 +7,7 @@ import Auth from '../Auth/Auth.js'
 import {connect} from 'react-redux'
 import {likePost} from '../../actions/postActions'
 import CommentList from './CommentList'
+import server from '../../config.js'
 
 const PostMedia = (props) => {
 
@@ -21,7 +22,7 @@ const PostMedia = (props) => {
 }
 
 function updateLike(userID, postID){
-    const fetchURL = 'http://localhost:5000/posts/like/' + userID + '/' + postID;
+    const fetchURL = server + '/posts/like/' + userID + '/' + postID;
     const token = Auth.getCookie('token');
     const header = 'Bearer ' + token
     return fetch(fetchURL,{

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import './Test.css'
 import Auth from '../Auth/Auth.js'
-
+import server from '../../config.js'
 class Test extends Component{
     constructor(){
         super();
@@ -70,7 +70,7 @@ class Test extends Component{
         const token = Auth.getCookie('token');
         const header = 'Bearer ' + token
         console.log(header);
-        fetch("http://localhost:5000/posts/testAuth",{
+        fetch(server +  "/posts/testAuth",{
             method:'GET',
             headers:{
                 'Accept': 'application/json',
@@ -91,7 +91,7 @@ class Test extends Component{
 
     onPost(event){
         event.preventDefault();
-        const fetchURL = 'http://localhost:5000/posts/' + Auth.parseJwt(Auth.getCookie('token')).sub;
+        const fetchURL = server + '/posts/' + Auth.parseJwt(Auth.getCookie('token')).sub;
         const token = Auth.getCookie('token');
         const header = 'Bearer ' + token
         fetch(fetchURL,{
@@ -118,7 +118,7 @@ class Test extends Component{
         event.preventDefault();
         const token = Auth.getCookie('token');
         const header = 'Bearer ' + token
-        fetch('http://localhost:5000/posts',{
+        fetch(server + '/posts',{
             method: 'GET',
             headers:{
                 'Accept': 'application/json',
@@ -139,7 +139,7 @@ class Test extends Component{
     onGetUserPosts(event){
         event.preventDefault();
         const userID = Auth.parseJwt(Auth.getCookie('token')).sub
-        const fetchURL = 'http://localhost:5000/users/' + userID;
+        const fetchURL = server + '/users/' + userID;
         const token = Auth.getCookie('token');
         const header = 'Bearer ' + token
         console.log(header);
@@ -176,7 +176,7 @@ class Test extends Component{
         //Get each post individually w/ array of postIDs.
         /*
         for(i = 0; i < this.state.messageIDs.length;i++){
-            let fetchURL = 'http://localhost:5000/posts/' + this.state.messageIDs[i];
+            let fetchURL = server + '/posts/' + this.state.messageIDs[i];
             console.log(fetchURL);
             fetch(fetchURL)
                 .then(results => {
@@ -193,7 +193,7 @@ class Test extends Component{
         */
         //Get all posts attached to a user.
         const userID = Auth.parseJwt(Auth.getCookie('token')).sub;
-        const fetchURL = 'http://localhost:5000/posts/getUserPosts/' + userID;
+        const fetchURL = server + '/posts/getUserPosts/' + userID;
         const token = Auth.getCookie('token');
         const header = 'Bearer ' + token;
         console.log(header);
@@ -217,7 +217,7 @@ class Test extends Component{
 
     onPostUpdate(event){
         event.preventDefault();
-        const fetchURL = 'http://localhost:5000/posts/' + this.state.postid;
+        const fetchURL = server + '/posts/' + this.state.postid;
         const token = Auth.getCookie('token');
         const header = 'Bearer ' + token
         fetch(fetchURL,{
